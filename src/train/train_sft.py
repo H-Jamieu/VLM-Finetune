@@ -85,6 +85,9 @@ def train():
         # This is becuase mixed-modality training monkey-patches the model forward method.
         if use_liger:
             apply_liger_kernel_to_qwen2_5_vl()
+    elif "qwen3" in model_args.model_id.lower():
+        if training_args.use_liger:
+            raise ValueError("Liger is not supported for Qwen3 models.")
     else:
         # It monkey patches the forward to handle mixed modality inputs.
         replace_qwen_2_with_mixed_modality_forward()
