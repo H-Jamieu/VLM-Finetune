@@ -1,6 +1,20 @@
-# Fine-tuning Qwen2-VL Series
+# Fine-tuning Qwen-VL Series and more
 
 This repository contains a script for training [Qwen2-VL](https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct) and [Qwen2.5-VL](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) with only using HuggingFace and [Liger-Kernel](https://github.com/linkedin/Liger-Kernel).
+
+I am planning to add support to more VLMs and make it a all-in-one finetuning code base. It is for personal research use and learning use.
+Due to resource limitation, 
+
+Forked from https://github.com/2U1/
+
+Upgrade plan:
+
+- Full support for GLM4.1V series
+- Full support for Intern-VL-S1 and 3.5 series
+- Full support for Qwen-VL-3 and Qwen-VL-3-moe
+- Intergrate Gemma3 training into the code base
+- Support multi-node training
+- Verl-like RL tuning algorithms: DAPO, GSPO etc.
 
 ## Other projects
 
@@ -13,6 +27,7 @@ This repository contains a script for training [Qwen2-VL](https://huggingface.co
 
 ## Update
 
+- [2025/10/09] Added support of GLM4.1V with continued pre-training. Added preliminary support for Qwen 3 VL series.
 - [2025/09/12] 🔥**Update for `transformers==4.56.1` and torch==`2.8.0`**
 - [2025/08/21] Add option for using 2-layer mlp for classification.
 - [2025/08/21] Add option for unfreeze only few layers for llm and vision tower.
